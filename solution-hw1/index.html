@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8">
-  <title>Page Title</title>
+  <head>
+    <title>Bun Bun Bake Shop Product Gallery</title>
+    <meta charset="UTF-8">
+
+    <!-- Link to css -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
   
   <body>
+    <nav>
+        <a class =  titleCurrPage href = "./index.html">PRODUCTS</a>
+        <a class =  titleOtherPage href = "./index.html">CART</a>
+    </nav>
 
-    <h1>I am the solution to HW1!</h1>
+    <main>
+      <h1>Our hand-made cinnamon rolls</h1>
 
-    <p>
-        And I can link to <a href="./productDetail.html"> Product Detail.</a>
-        and also <a href="./shoppingCart.html"> Shopping Cart </a>
-    </p>
+      <!-- each section contains one product -->
+      <section>
+        <img class = testImg src = "../assets/products/original-cinnamon-roll.jpg" />
+        <div>
+          <!-- or <h2 class = link > Original cinnamon roll </h2> -->
+          <a href = "./productDetail.html">Original cinnamon roll</a>
+          <p>$2.49</p>
+        </div>
+      </section>
+
+      <p>
+          And I can link to <a href="./productDetail.html"> Product Detail.</a>
+          and also <a href="./shoppingCart.html"> Shopping Cart </a>
+      </p>
+    </main>
+    
 
   </body>
 </html>

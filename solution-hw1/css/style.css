@@ -1,0 +1,17 @@
+nav a {
+    display: block; 
+}
+
+.titleCurrPage {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.titleOtherPage {
+    color: #191919; 
+}
+
+.testImg {
+    width: 400px;
+    height: 400px;
+}
