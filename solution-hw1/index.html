@@ -9,17 +9,25 @@
   </head>
   
   <body>
-    <nav>
-        <a class =  titleCurrPage href = "./index.html">PRODUCTS</a>
-        <a class =  titleOtherPage href = "./index.html">CART</a>
-    </nav>
+    <!-- header -->
+    <section> 
+      <a href = "./index.html"><img class = "logo" src = "../assets/logo/logo-01.svg" /></a>
+      <!-- drawing line resource: https://www.w3schools.com/tags/tag_hr.asp -->
+      <hr class = "headerLine">
+    </section>
 
+    <!-- navigation bar -->
+    <nav>
+        <a class =  "navCurrPage" href = "./index.html">PRODUCTS</a>
+        <a class =  "navOtherPage" href = "./shoppingCart.html">CART</a>
+    </nav>
+    
     <main>
       <h1>Our hand-made cinnamon rolls</h1>
 
       <!-- each section contains one product -->
       <section>
-        <img class = testImg src = "../assets/products/original-cinnamon-roll.jpg" />
+        <img class = "testImg" src = "../assets/products/original-cinnamon-roll.jpg" />
         <div>
           <!-- or <h2 class = link > Original cinnamon roll </h2> -->
           <a href = "./productDetail.html">Original cinnamon roll</a>
