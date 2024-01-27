@@ -42,7 +42,7 @@ nav a {
 
 /* Web Main Body */
 .pageTitle { 
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 500;
     text-align: center;
     margin-top: 2%;
@@ -50,12 +50,12 @@ nav a {
 }
 
 /* Individual Product */
-/* align center: https://www.w3schools.com/howto/howto_css_image_center.asp*/
 main section a {
     text-decoration: none;
     color: black; 
 }
 
+/* align center: https://www.w3schools.com/howto/howto_css_image_center.asp*/
 .productBox {
     width: 406px; 
     height: 510px; 
@@ -63,6 +63,13 @@ main section a {
     margin-right: auto;
     margin-bottom: 20px;
     font-size: 20px; 
+}
+
+.center { 
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
 }
 
 .productBox:hover{
@@ -77,6 +84,67 @@ main section a {
     border: 3px solid black;
 }
 
+.smallImg {
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+}
 .itemName {
     text-decoration: underline;
+}
+
+.itemName:hover {
+    font-weight: bold;
+}
+
+.normalText { 
+    font-size: 20px;
+    margin-top: 35px;
+}
+
+.normalTextBold {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu{
+    font-size: 18px;
+}
+
+.addToCartButton {
+    padding: 15px;
+    background-color: yellow;
+    border: 1px solid black;
+    margin-left: 20px;
+}
+
+.plainLink {
+    text-decoration: none;
+    color: black;
+}
+
+.removeStyle {
+    font-size: 20px; 
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.checkoutListing { 
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.footerLine {
+    width: 80%; 
+    height: 4px;
+    background-color:black;
+}
+
+.checkoutButton {
+    margin-top: 20px; 
+    display: inline-block;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: yellow;
+    border: 1px solid black;
 }
