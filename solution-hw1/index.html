@@ -18,27 +18,32 @@
 
     <!-- navigation bar -->
     <nav>
+      <div>
         <a class =  "navCurrPage" href = "./index.html">PRODUCTS</a>
+      </div>
+      <div>
         <a class =  "navOtherPage" href = "./shoppingCart.html">CART</a>
+      </div>
     </nav>
     
+    <!-- main webpage -->
     <main>
-      <h1>Our hand-made cinnamon rolls</h1>
+      <!-- page title -->
+      <p class = "pageTitle">Our hand-made cinnamon rolls</p>
 
       <!-- each section contains one product -->
       <section>
-        <img class = "testImg" src = "../assets/products/original-cinnamon-roll.jpg" />
-        <div>
-          <!-- or <h2 class = link > Original cinnamon roll </h2> -->
-          <a href = "./productDetail.html">Original cinnamon roll</a>
-          <p>$2.49</p>
+        <a href = "./productDetail.html"><img class = "largeImg center" src = "../assets/products/original-cinnamon-roll.jpg" /></a>
+        
+        <!-- link to product detail & price -->
+        <div class = "productListing">
+          <div class = "productTitle"> 
+            <a href = "./productDetail.html">Original cinnamon roll</a>
+            <p>$2.49</p>
+          </div>
         </div>
       </section>
 
-      <p>
-          And I can link to <a href="./productDetail.html"> Product Detail.</a>
-          and also <a href="./shoppingCart.html"> Shopping Cart </a>
-      </p>
     </main>
     
 

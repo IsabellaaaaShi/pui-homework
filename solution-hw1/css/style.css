@@ -14,27 +14,67 @@ body {
 }
 
 /* Nav Bar */
-nav a {
+nav div {
     text-align: center;
-    display: block; 
+}
+
+nav a {
+    display: inline-block;
     /* get rid of underline: https://www.w3schools.com/tags/tag_a.asp */
     text-decoration: none;
     /* adjust margin: https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top */
-    margin-bottom: 10%;
+    margin: 5px;
 }
 
 .navCurrPage {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 28px;
+    /* bolder text: https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight */
+    font-weight: 700;
     color: black;
+    background-color: yellow;
 }
 
 .navOtherPage {
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: 500;
     color:black
 }
 
-.testImg {
+/* Web Main Body */
+.pageTitle { 
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+/* align center: https://www.w3schools.com/howto/howto_css_image_center.asp*/
+
+.center {
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.largeImg {
+    text-align: center;
     width: 400px;
     height: 400px;
+    /* add border: https://www.w3schools.com/howto/howto_css_border_image.asp */
+    border: 3px solid black;
+}
+
+.productListing{
+    display:block; 
+    width: 400px;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.productTitle {
+    font-size: 20px; 
+    text-align: left;
+    margin-top: 6%;
+    margin-bottom: 6%;
 }
