@@ -1,0 +1,150 @@
+/* universal elements for the entire page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.logo {
+    width: 400px;
+}
+
+.headerLine {
+    height: 2px;
+    background-color:black;
+}
+
+/* Nav Bar */
+nav div {
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    /* get rid of underline: https://www.w3schools.com/tags/tag_a.asp */
+    text-decoration: none;
+    /* adjust margin: https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top */
+    margin: 5px;
+}
+
+.navCurrPage {
+    font-size: 28px;
+    /* bolder text: https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight */
+    font-weight: 700;
+    color: black;
+    background-color: yellow;
+}
+
+.navOtherPage {
+    font-size: 28px;
+    font-weight: 500;
+    color:black
+}
+
+/* Web Main Body */
+.pageTitle { 
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+/* Individual Product */
+main section a {
+    text-decoration: none;
+    color: black; 
+}
+
+/* align center: https://www.w3schools.com/howto/howto_css_image_center.asp*/
+.productBox {
+    width: 406px; 
+    height: 510px; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 20px; 
+}
+
+.center { 
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+}
+
+.productBox:hover{
+    background-color: yellow;
+}
+
+.largeImg {
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    /* add border: https://www.w3schools.com/howto/howto_css_border_image.asp */
+    border: 3px solid black;
+}
+
+.smallImg {
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+}
+.itemName {
+    text-decoration: underline;
+}
+
+.itemName:hover {
+    font-weight: bold;
+}
+
+.normalText { 
+    font-size: 20px;
+    margin-top: 35px;
+}
+
+.normalTextBold {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu{
+    font-size: 18px;
+}
+
+.addToCartButton {
+    padding: 15px;
+    background-color: yellow;
+    border: 1px solid black;
+    margin-left: 20px;
+}
+
+.plainLink {
+    text-decoration: none;
+    color: black;
+}
+
+.removeStyle {
+    font-size: 20px; 
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.checkoutListing { 
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.footerLine {
+    width: 80%; 
+    height: 4px;
+    background-color:black;
+}
+
+.checkoutButton {
+    margin-top: 20px; 
+    display: inline-block;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: yellow;
+    border: 1px solid black;
+}

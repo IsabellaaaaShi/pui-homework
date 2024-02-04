@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bun Bun Bake Shop Product Detail</title>
+    <meta charset="UTF-8">
+
+    <!-- Link to css -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  
+  <body>
+    <!-- header -->
+    <section> 
+      <a href = "./index.html"><img class = "logo" src = "../assets/logo/logo-01.svg" /></a>
+      <!-- drawing line resource: https://www.w3schools.com/tags/tag_hr.asp -->
+      <hr class = "headerLine">
+    </section>
+
+    <!-- navigation bar -->
+    <nav>
+      <div>
+        <a class =  "navCurrPage" href = "./index.html">PRODUCTS</a>
+      </div>
+      <div>
+        <a class =  "navOtherPage" href = "./shoppingCart.html">CART</a>
+      </div>
+    </nav>
+
+    <!-- main webpage -->
+    <main class = center>
+      <!-- page title -->
+      <p class = "pageTitle">Original cinnamon roll</p>
+      
+      <!-- overview of product -->
+      <img class = "largeImg center" src = "../assets/products/original-cinnamon-roll.jpg" />
+      <p class = "normalText">Customize our delicious, hand-making cinnamons to your liking!</p>
+      <p class = "normalText">Glazing:</p>
+
+      <!-- drop down: https://www.w3schools.com/tags/tag_select.asp-->
+      <select class = "menu" name = "glazing" >
+        <option value = "keepOriginal">Keep original</option>
+        <option value = "sugarMilk">Sugar milk</option>
+        <option value = "vanillaMilk">Vanilla milk</option>
+        <option value = "doubleChocolate">Double chocolate</option>
+      </select>
+
+      <p class = "normalText">Pack size:</p>
+
+      <!-- drop down: https://www.w3schools.com/tags/tag_select.asp-->
+      <select class = "menu" name = "packSize" >
+        <option value = "one">1</option>
+        <option value = "three">3</option>
+        <option value = "six">6</option>
+        <option value = "twelve">12</option>
+      </select>
+      <br><br>
+
+      <!-- price & add to cart -->
+      <div class = "center">
+        <p class = "normalTextBold">
+          $2.49
+          <span class = "addToCartButton">
+            <a class = "plainLink" href = "./shoppingCart.html">Add to Cart</a>
+          </span>
+        </p>
+      </div>
+
+    </main>
+  </body>
+</html>
+
