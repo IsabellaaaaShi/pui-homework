@@ -36,7 +36,6 @@ nav {
     display: flex; 
     flex-direction: row;
     justify-content: flex-end;
-    background-color: blue;
 }
 
 nav a {
@@ -53,6 +52,10 @@ nav a {
     font-weight: 700;
     color: black;
     background-color: yellow;
+}
+
+.navGap {
+    margin-right: 50px;
 }
 
 .navOtherPage {
@@ -73,7 +76,7 @@ nav a {
     height: 30px; 
     background-color: red;
     border-radius: 50%;
-    margin-top: -2px; 
+    margin-top: -8px; 
 }
 
 .pageTitle { 

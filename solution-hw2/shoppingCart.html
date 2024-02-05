@@ -12,26 +12,37 @@
   
   <body>
     <!-- header -->
-    <section> 
-      <a href = "./index.html"><img class = "logo" src = "../assets/logo/logo-01.svg" /></a>
-      <!-- drawing line resource: https://www.w3schools.com/tags/tag_hr.asp -->
-      <hr class = "headerLine">
-    </section>
-  
-    <!-- navigation bar -->
-    <nav>
-      <div>
-        <a class =  "navOtherPage" href = "./index.html">PRODUCTS</a>
+    <header>
+      <div> 
+        <a href = "./index.html"><img class = "logo" src = "../assets/logo/logo-01.svg" /></a>
       </div>
-      <div>
-        <a class =  "navCurrPage" href = "./shoppingCart.html">CART</a>
+
+      <!-- flex box ref: https://css-tricks.com/snippets/css/a-guide-to-flexbox/-->
+      <div class = "headerContainerLarge"> 
+        <!-- navigation bar -->
+        <br>
+        <nav>
+          <div>
+            <a class =  "navOtherPage navGap" href = "./index.html">PRODUCTS</a>
+          </div>
+          <div>
+            <a class =  "navCurrPage" href = "./shoppingCart.html">CART</a>
+          </div>
+          <!-- oval superscript-->
+          <div>
+            <p class = "oval">2</p>
+          </div>
+        </nav>
+
+        <!-- drawing line resource: https://www.w3schools.com/tags/tag_hr.asp -->
+        <hr class = "headerLine">
+        <br>
+        <p class = "pageTitle">Shopping Cart</p>
       </div>
-    </nav>
+    </header>
 
     <!-- main webpage -->
     <main class = center>
-      <!-- page title -->
-      <p class = "pageTitle">Shopping Cart</p>
     
       <!-- cart detail -->
       <img class = "smallImg center" src = "../assets/products/original-cinnamon-roll.jpg" />
