@@ -49,6 +49,17 @@ nav a {
     margin-bottom: 3%;
 }
 
+/* Main Page Flex Box */
+.productContainer {
+    width: 1000px; 
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center; 
+}
+
 /* Individual Product */
 main section a {
     text-decoration: none;
@@ -57,8 +68,8 @@ main section a {
 
 /* align center: https://www.w3schools.com/howto/howto_css_image_center.asp*/
 .productBox {
-    width: 406px; 
-    height: 510px; 
+    width: 291px; 
+    height: 395px; 
     margin-left: auto; 
     margin-right: auto;
     margin-bottom: 20px;
@@ -78,8 +89,8 @@ main section a {
 
 .largeImg {
     text-align: center;
-    width: 400px;
-    height: 400px;
+    width: 285px;
+    height: 285px;
     /* add border: https://www.w3schools.com/howto/howto_css_border_image.asp */
     border: 3px solid black;
 }
