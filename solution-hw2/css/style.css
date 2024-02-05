@@ -3,12 +3,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Header */
+/* ----------------------
+Header
+----------------------- */
+
 header {
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 75px;
+    margin-bottom: 60px;
 }
 
 .logo {
@@ -24,13 +27,7 @@ header {
     justify-content: space-between;
 }
 
-.headerLine {
-    height: 2px;
-    width: 100%; 
-    background-color:black;
-}
-
-/* Nav Bar */
+/* Nav Bar ---------------- */
 nav {
     margin-right: 50px;
     display: flex; 
@@ -47,7 +44,7 @@ nav a {
 }
 
 .navCurrPage {
-    font-size: 24px;
+    font-size: 26px;
     /* bolder text: https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight */
     font-weight: 700;
     color: black;
@@ -59,7 +56,7 @@ nav a {
 }
 
 .navOtherPage {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 500;
     color:black
 }
@@ -79,36 +76,48 @@ nav a {
     margin-top: -8px; 
 }
 
+.headerLine {
+    height: 4px;
+    width: 100%; 
+    background-color:black;
+}
+
 .pageTitle { 
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 500;
 }
 
-/* Main Page Flex Box */
-.productContainer {
+
+/*-------------------------------
+Main Webpage
+-------------------------------*/
+
+main section a {
+    text-decoration: none;
+    color: black; 
+}
+
+/* Product Gallery Page ------------------------------ */ 
+.galleryContainer {
     width: 1000px; 
     margin-left: auto;
     margin-right: auto;
     display: flex; 
     flex-direction: row; 
     justify-content: center;
-    align-items: center; 
+    align-items: flex-start; 
 }
+
 
 /* Individual Product */
-main section a {
-    text-decoration: none;
-    color: black; 
-}
-
 /* align center: https://www.w3schools.com/howto/howto_css_image_center.asp*/
 .productBox {
     width: 291px; 
-    height: 395px; 
+    
     margin-left: auto; 
     margin-right: auto;
     margin-bottom: 20px;
-    font-size: 20px; 
+    font-size: 21px; 
 }
 
 .center { 
@@ -122,7 +131,7 @@ main section a {
     background-color: yellow;
 }
 
-.largeImg {
+.galleryImg {
     text-align: center;
     width: 285px;
     height: 285px;
@@ -130,17 +139,31 @@ main section a {
     border: 3px solid black;
 }
 
-.smallImg {
-    width: 200px;
-    height: 200px;
-    border: 3px solid black;
-}
 .itemName {
     text-decoration: underline;
 }
 
 .itemName:hover {
     font-weight: bold;
+}
+
+
+/* Product Detail Page----------------------- */
+.productContainer {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+}
+
+.productImg {
+    width: 600px; 
+    height: 600px; 
+    border: 3px solid black;
+    margin-right: 25px;
+}
+
+.productContainerSmall {
+    width: 400px; 
 }
 
 .normalText { 
@@ -167,6 +190,14 @@ main section a {
 .plainLink {
     text-decoration: none;
     color: black;
+}
+
+
+/* Cart Page-----------------------------------*/
+.cartImg {
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
 }
 
 .removeStyle {
