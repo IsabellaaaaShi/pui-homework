@@ -42,29 +42,49 @@
     </header>
 
     <!-- main webpage -->
-    <main class = center>
+    <main class = "cartContainer">
     
       <!-- cart detail -->
-      <img class = "cartImg center" src = "../assets/products/original-cinnamon-roll.jpg" />
-      <p class = "removeStyle">Remove</p>
-      <p class = "checkoutListing">Original Cinnamon Roll</p>
-      <p class = "checkoutListing">Glazing: Kepp original</p>
-      <p class = "checkoutListing">Pack Size: 1</p>
-      <p class = "checkoutListing">$2.49</p>
-
-      <img class = "cartImg center" src = "../assets/products/double-chocolate-cinnamon-roll.jpg" />
-      <p class = "removeStyle">Remove</p>
-      <p class = "checkoutListing">Double Chocolate Cinnamon Roll</p>
-      <p class = "checkoutListing">Glazing: Sugar Milk</p>
-      <p class = "checkoutListing">Pack Size: 6</p>
-      <p class = "checkoutListing">$27.45</p>
-
-      <dr></dr>
-      <hr class = "footerLine">
-      <p class = "checkoutListing">Total: $29.94</p>
-      <div class = "checkoutButton">
-        <p class = normalTextBold>Checkout</p>
+      <div class = "cartItemContainer">
+        <img class = "cartImg" src = "../assets/products/original-cinnamon-roll.jpg" />
+        <div class = "checkoutListing">
+          <p>Original Cinnamon Roll</p>
+          <p>Glazing: Keep original</p>
+          <p>Pack Size: 1</p>
+          <br><br>
+        </div>
+        <div>
+          <p class = "cartItemPrice">$2.49</p>
+          <br><br>
+        </div>
       </div>
+
+      <p class = "removeStyle">Remove</p>
+
+      <div class = "cartItemContainer">
+        <img class = "cartImg" src = "../assets/products/double-chocolate-cinnamon-roll.jpg" />
+        <div class = "checkoutListing"> 
+          <p>Double Chocolate Cinnamon Roll</p>
+          <p>Glazing: Sugar Milk</p>
+          <p>Pack Size: 6</p>
+          <br><br>
+        </div>
+        <div>
+          <p class = "cartItemPrice">$27.45</p>
+          <br><br>
+        </div>
+      </div>
+
+      <p class = "removeStyle">Remove</p>
+
+      <hr class = "footerLine">
+
+      <div>
+        <p class = "checkoutListing">Total: $29.94</p>
+      </div>
+      
+      <p class = "checkoutButton normalTextBold">Checkout</p>
+
     </main>
 
   </body>
