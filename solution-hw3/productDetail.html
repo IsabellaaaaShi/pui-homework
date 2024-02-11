@@ -6,6 +6,8 @@
 
     <!-- Link to css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Link to javascript-->
+    <script defer src="js/computeDetailPrice.js"></script>
   </head>
   
   <body>
@@ -55,11 +57,10 @@
           <p class = "normalText">Glazing:</p>
 
           <!-- drop down: https://www.w3schools.com/tags/tag_select.asp-->
-          <select class = "menu" name = "glazing" >
-            <option value = "keepOriginal">Keep original</option>
-            <option value = "sugarMilk">Sugar milk</option>
-            <option value = "vanillaMilk">Vanilla milk</option>
-            <option value = "doubleChocolate">Double chocolate</option>
+          <select class = "menu" 
+                  id = "glazingOption" 
+                  onchange = "glazingChange(this)"
+                  name = "glazing" >
           </select>
 
           <br><br>
@@ -67,18 +68,17 @@
           <p class = "normalText">Pack size:</p>
 
           <!-- drop down: https://www.w3schools.com/tags/tag_select.asp-->
-          <select class = "menu" name = "packSize" >
-            <option value = "one">1</option>
-            <option value = "three">3</option>
-            <option value = "six">6</option>
-            <option value = "twelve">12</option>
+          <select class = "menu" 
+                  id = "packSizeOption"
+                  onchange = "packSizeChange(this)"
+                  name = "packSize" >
           </select>
         </div>
 
 
         <!-- price & add to cart -->
         <div class = "priceAndCart">
-          <p class = "normalTextBold">$2.49</p>
+          <p class = "normalTextBold" id = "finalPrice">$2.49</p>
           <a class = "addToCartButton normalTextBold plainLink" href = "./shoppingCart.html">Add to Cart</a>
         </div>
 
