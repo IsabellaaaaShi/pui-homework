@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Bun Bun Bake Shop Shopping Cart</title>
+    <meta charset="UTF-8">
+
+    <!-- Link to css -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  
+  
+  <body>
+    <!-- header -->
+    <header>
+      <div> 
+        <a href = "./index.html"><img class = "logo" src = "../assets/logo/logo-01.svg" /></a>
+      </div>
+
+      <!-- flex box ref: https://css-tricks.com/snippets/css/a-guide-to-flexbox/-->
+      <div class = "headerContainerLarge"> 
+        <!-- navigation bar -->
+        <br>
+        <nav>
+          <div>
+            <a class =  "navOtherPage navGap" href = "./index.html">PRODUCTS</a>
+          </div>
+          <div>
+            <a class =  "navCurrPage" href = "./shoppingCart.html">CART</a>
+          </div>
+          <!-- oval superscript-->
+          <div>
+            <p class = "oval">2</p>
+          </div>
+        </nav>
+
+        <!-- drawing line resource: https://www.w3schools.com/tags/tag_hr.asp -->
+        <hr class = "headerLine">
+        <br>
+        <p class = "pageTitle">Shopping Cart</p>
+      </div>
+    </header>
+
+    <!-- main webpage -->
+    <main class = "cartContainer">
+    
+      <!-- cart detail -->
+      <div class = "cartItemContainer">
+        <img class = "cartImg" src = "../assets/products/original-cinnamon-roll.jpg" />
+        <div class = "checkoutListing">
+          <p>Original Cinnamon Roll</p>
+          <p>Glazing: Keep original</p>
+          <p>Pack Size: 1</p>
+          <br><br>
+        </div>
+        <div>
+          <p class = "cartItemPrice">$ 2.49</p>
+          <br><br>
+        </div>
+      </div>
+
+      <p class = "removeStyle">Remove</p>
+
+      <div class = "cartItemContainer">
+        <img class = "cartImg" src = "../assets/products/double-chocolate-cinnamon-roll.jpg" />
+        <div class = "checkoutListing"> 
+          <p>Double Chocolate Cinnamon Roll</p>
+          <p>Glazing: Sugar Milk</p>
+          <p>Pack Size: 6</p>
+          <br><br>
+        </div>
+        <div>
+          <p class = "cartItemPrice">$ 27.45</p>
+          <br><br>
+        </div>
+      </div>
+
+      <p class = "removeStyle">Remove</p>
+
+      <hr class = "footerLine">
+
+      <div class = "cartItemContainer">
+        <p class = "placeHolder"></p>
+        <p class = "checkoutListing">Total</p>
+        <p class = "cartItemPrice">$ 29.94</p>
+      </div>
+      
+      <p class = "checkoutButton normalTextBold">Checkout</p>
+
+    </main>
+
+  </body>
+</html>
+
