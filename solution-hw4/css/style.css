@@ -1,0 +1,268 @@
+/* universal elements for the entire page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ----------------------
+Header
+----------------------- */
+
+header {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.logo {
+    width: 400px;
+    margin-right: 15px; 
+}
+
+.headerContainerLarge {
+    flex-grow: 8;
+    
+    display:flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Nav Bar ---------------- */
+nav {
+    margin-right: 50px;
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav a {
+    display: inline-block;
+    /* get rid of underline: https://www.w3schools.com/tags/tag_a.asp */
+    text-decoration: none;
+    /* adjust margin: https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top */
+    margin: 5px;
+}
+
+.navCurrPage {
+    font-size: 26px;
+    /* bolder text: https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight */
+    font-weight: 700;
+    color: black;
+    background-color: yellow;
+}
+
+.navGap {
+    margin-right: 50px;
+}
+
+.navOtherPage {
+    font-size: 26px;
+    font-weight: 500;
+    color:black
+}
+
+/* draw oval: https://stackoverflow.com/questions/26961221/how-to-make-an-oval-in-css */
+.oval {
+    font-size: 18px; 
+    font-weight: 500;
+    text-align: center;
+    /* text center: https://stackoverflow.com/questions/4801181/vertically-and-horizontally-centering-text-in-circle-in-css-like-iphone-notific */
+    line-height: 30px;
+    color: white;
+    width: 20px;
+    height: 30px; 
+    background-color: red;
+    border-radius: 50%;
+    margin-top: -8px; 
+}
+
+.headerLine {
+    height: 4px;
+    width: 100%; 
+    background-color:black;
+}
+
+.pageTitle { 
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+/*-------------------------------
+Main Webpage
+-------------------------------*/
+
+main section a {
+    text-decoration: none;
+    color: black; 
+}
+
+/* Product Gallery Page ------------------------------ */ 
+.galleryContainer {
+    width: 1000px; 
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+
+/* Individual Product */
+/* align center: https://www.w3schools.com/howto/howto_css_image_center.asp*/
+.productBox {
+    width: 291px; 
+    
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 21px; 
+}
+
+.center { 
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+}
+
+.productBox:hover{
+    background-color: yellow;
+}
+
+.galleryImg {
+    text-align: center;
+    width: 285px;
+    height: 285px;
+    /* add border: https://www.w3schools.com/howto/howto_css_border_image.asp */
+    border: 3px solid black;
+}
+
+.itemName {
+    text-decoration: underline;
+}
+
+.itemName:hover {
+    font-weight: bold;
+}
+
+
+/* Product Detail Page----------------------- */
+.productContainer {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+}
+
+.productImg {
+    width: 600px; 
+    height: 600px; 
+    border: 3px solid black;
+    margin-right: 25px;
+}
+
+.productContainerSmall {
+    width: 250px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.normalText { 
+    font-size: 20px;
+}
+
+.normalTextBold {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu{
+    font-size: 18px;
+    width: 100%; 
+    height: 40px; 
+}
+
+.priceAndCart {
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline; 
+}
+
+.addToCartButton {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: yellow;
+    border: 1px solid black;
+    margin-left: 22px;
+}
+
+.plainLink {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Cart Page-----------------------------------*/
+.cartImg {
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+}
+
+.cartContainer {
+    width: 55%;
+    margin-left: 400px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cartItemContainer {
+    display: flex; 
+    width: 100%; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.removeStyle {
+    font-size: 20px; 
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.checkoutListing { 
+    font-size: 20px;
+    margin-left: 30px;
+    flex-grow: 2; 
+}
+
+.cartItemPrice {
+    font-size: 20px; 
+    text-align: end;
+}
+
+.footerLine {
+    width: 100%; 
+    height: 6px;
+    background-color:black;
+}
+
+.placeHolder {
+    width: 200px; 
+}
+
+.checkoutButton {
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 18px; 
+    padding-bottom: 18px;
+    background-color: yellow;
+    border: 1px solid black;
+    align-self: flex-end;
+}

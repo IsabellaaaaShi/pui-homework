@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bun Bun Bake Shop Product Detail</title>
+    <meta charset="UTF-8">
+
+    <!-- Link to css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link to javascript-->
+    <script defer src="js/computeDetailPrice.js"></script>
+  </head>
+  
+  <body>
+    <!-- header -->
+    <header>
+      <div> 
+        <a href = "./index.html"><img class = "logo" src = "../assets/logo/logo-01.svg"/></a>
+      </div>
+
+      <!-- flex box ref: https://css-tricks.com/snippets/css/a-guide-to-flexbox/-->
+      <div class = "headerContainerLarge"> 
+        <!-- navigation bar -->
+        <br>
+        <nav>
+          <div>
+            <a class =  "navCurrPage navGap" href = "./index.html">PRODUCTS</a>
+          </div>
+          <div>
+            <a class =  "navOtherPage" href = "./shoppingCart.html">CART</a>
+          </div>
+          <!-- oval superscript-->
+          <div>
+            <p class = "oval">2</p>
+          </div>
+        </nav>
+
+        <!-- drawing line resource: https://www.w3schools.com/tags/tag_hr.asp -->
+        <hr class = "headerLine">
+        <br>
+        <p class = "pageTitle">Original cinnamon roll</p>
+      </div>
+    </header>
+
+    <!-- main webpage -->
+    <main class = "productContainer">
+      
+      <!-- image column -->
+      <div>
+        <img class = "productImg" src = "../assets/products/original-cinnamon-roll.jpg"/>
+      </div>
+      
+      <!-- text & option column -->
+      <div class = "productContainerSmall">
+        <p class = "normalText">Customize our delicious, hand-making cinnamons to your liking!</p>
+
+        <div> 
+          <p class = "normalText">Glazing:</p>
+
+          <!-- drop down: https://www.w3schools.com/tags/tag_select.asp-->
+          <select class = "menu" 
+                  id = "glazingOption" 
+                  onchange = "glazingChange(this)"
+                  name = "glazing" >
+          </select>
+
+          <br><br>
+
+          <p class = "normalText">Pack size:</p>
+
+          <!-- drop down: https://www.w3schools.com/tags/tag_select.asp-->
+          <select class = "menu" 
+                  id = "packSizeOption"
+                  onchange = "packSizeChange(this)"
+                  name = "packSize" >
+          </select>
+        </div>
+
+
+        <!-- price & add to cart -->
+        <div class = "priceAndCart">
+          <p class = "normalTextBold" id = "finalPrice">$2.49</p>
+          <a class = "addToCartButton normalTextBold plainLink" href = "./shoppingCart.html">Add to Cart</a>
+        </div>
+
+      </div>
+    </main>
+  </body>
+</html>
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bun Bun Bake Shop Product Gallery</title>
+    <meta charset="UTF-8">
+
+    <!-- Link to css -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  
+  <body>
+    <!-- header -->
+    <header>
+      <div> 
+        <a href = "./index.html"><img class = "logo" src = "../assets/logo/logo-01.svg"/></a>
+      </div>
+
+      <!-- flex box ref: https://css-tricks.com/snippets/css/a-guide-to-flexbox/-->
+      <div class = "headerContainerLarge"> 
+        <!-- navigation bar -->
+        <br>
+        <nav>
+          <div>
+            <a class =  "navCurrPage navGap" href = "./index.html">PRODUCTS</a>
+          </div>
+          <div>
+            <a class =  "navOtherPage" href = "./shoppingCart.html">CART</a>
+          </div>
+          <!-- oval superscript-->
+          <div>
+            <p class = "oval">2</p>
+          </div>
+        </nav>
+
+        <!-- drawing line resource: https://www.w3schools.com/tags/tag_hr.asp -->
+        <hr class = "headerLine">
+        <br>
+        <p class = "pageTitle">Our hand-made cinnamon rolls</p>
+      </div>
+    </header>
+    
+
+    <!-- all the products -->
+    <main>
+      <!-- first row of products-->
+      <div class = "galleryContainer"> 
+        <!-- each section contains one product -->
+        <!-- original -->
+        <section class = "productBox">
+          <!-- entire section as a link-->
+          <a href = "./productDetail.html">
+            <img class = "galleryImg" src = "../assets/products/original-cinnamon-roll.jpg"/>
+            <!-- link to product detail & price -->
+            <div>
+              <p class = "itemName">Original cinnamon roll</p>
+              <p>$2.49</p>
+            </div>
+          </a>
+        </section>
+
+        <!-- apple -->
+        <section class = "productBox">
+          <!-- entire section as a link-->
+          <a href = "./productDetail.html">
+            <img class = "galleryImg" src = "../assets/products/apple-cinnamon-roll.jpg"/>
+            <!-- link to product detail & price -->
+            <div>
+              <p class = "itemName">Apple cinnamon roll</p>
+              <p>$3.49</p>
+            </div>
+          </a>
+        </section>
+
+        <!-- raisin -->
+        <section class = "productBox">
+          <!-- entire section as a link-->
+          <a href = "./productDetail.html">
+            <img class = "galleryImg" src = "../assets/products/raisin-cinnamon-roll.jpg"/>
+            <!-- link to product detail & price -->
+            <div>
+              <p class = "itemName">Raisin cinnamon roll</p>
+              <p>$2.99</p>
+            </div>
+          </a>
+        </section>
+      </div>
+
+      <!-- second row of products-->
+      <div class = "galleryContainer"> 
+        <!-- walnut-->
+        <section class = "productBox">
+          <!-- entire section as a link-->
+          <a href = "./productDetail.html">
+            <img class = "galleryImg" src = "../assets/products/walnut-cinnamon-roll.jpg"/>
+            <!-- link to product detail & price -->
+            <div>
+              <p class = "itemName">Walnut cinnamon roll</p>
+              <p>$3.49</p>
+            </div>
+          </a>
+        </section>
+
+        <!-- double-chocolate -->
+        <section class = "productBox">
+          <!-- entire section as a link-->
+          <a href = "./productDetail.html">
+            <img class = "galleryImg" src = "../assets/products/double-chocolate-cinnamon-roll.jpg"/>
+            <!-- link to product detail & price -->
+            <div>
+              <p class = "itemName">Double-chocolate cinnamon roll</p>
+              <p>$3.99</p>
+            </div>
+          </a>
+        </section>
+
+        <!-- strawberry -->
+        <section class = "productBox">
+          <!-- entire section as a link-->
+          <a href = "./productDetail.html">
+            <img class = "galleryImg" src = "../assets/products/strawberry-cinnamon-roll.jpg"/>
+            <!-- link to product detail & price -->
+            <div>
+              <p class = "itemName">Strawberry cinnamon roll</p>
+              <p>$3.99</p>
+            </div>
+          </a>
+        </section>
+      </div>
+    </main>
+    
+
+  </body>
+</html>
