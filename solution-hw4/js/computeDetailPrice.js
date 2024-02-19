@@ -1,9 +1,27 @@
-// define the basic case------------------------------------
+// -------- update detail page selection ------------------------------------------
+// reference lab 4
+const queryString = window.location.search; 
+const params = new URLSearchParams(queryString); 
+const chosenRoll = params.get('roll');
+updateDetailPage(chosenRoll)
+
+function updateDetailPage(roll) {
+    // update header roll type
+    const headerElement = document.querySelector("#rollTitle"); 
+    headerElement.innerText = roll + " cinnamon roll"; 
+
+    // update image
+    const rollImage = document.querySelector("#detailPageImage"); 
+    // change roll name to lowercase: https://www.w3schools.com/jsref/jsref_tolowercase.asp
+    rollImage.src = "../assets/products/" + roll.toLowerCase() + "-cinnamon-roll.jpg"; 
+}
+
+// -------- define the basic case ------------------------------------
 const basePrice = 2.49;
 let currGlazingPrice = 0;
 let currPackSize = 1;
 
-// glazing price -------------------------------------------
+// -------- glazing price -------------------------------------------
 const glazingPrice = {
     "Keep original": 0,
     "Sugar milk": 0,
@@ -29,7 +47,7 @@ function glazingChange(element) {
     priceUpdate();
 }
 
-// pack size ------------------------------------------------
+// -------- pack size ------------------------------------------------
 const packSize = {
     "1": 1,
     "3": 3,
@@ -54,7 +72,7 @@ function packSizeChange(element) {
     priceUpdate(); 
 }
 
-// update the price ------------------------------------------
+// -------- update the price ------------------------------------------
 function priceUpdate() {
     const priceTotal = (basePrice + currGlazingPrice) * currPackSize; 
     const priceDisplay = document.querySelector("#finalPrice"); 
@@ -62,3 +80,5 @@ function priceUpdate() {
     // update the webpage: lab example
     priceDisplay.textContent= "$" + priceTotal.toFixed(2); 
 }
+
+
