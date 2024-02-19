@@ -7,8 +7,8 @@
     <!-- Link to css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Link to javascript-->
-    <script defer src="js/computeDetailPrice.js"></script>
     <script defer src="js/rollsData.js"></script>
+    <script defer src="js/computeDetailPrice.js"></script>
   </head>
   
   <body>
@@ -80,7 +80,8 @@
         <!-- price & add to cart -->
         <div class = "priceAndCart">
           <p class = "normalTextBold" id = "finalPrice">$2.49</p>
-          <a class = "addToCartButton normalTextBold plainLink" href = "./shoppingCart.html">Add to Cart</a>
+          <p class = "addToCartButton normalTextBold" 
+          onclick = "updateCart()">Add to Cart</p>
         </div>
 
       </div>

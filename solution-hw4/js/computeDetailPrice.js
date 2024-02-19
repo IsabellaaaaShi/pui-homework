@@ -1,9 +1,12 @@
+
 // -------- update detail page selection ------------------------------------------
 // reference lab 4
 const queryString = window.location.search; 
 const params = new URLSearchParams(queryString); 
 const chosenRoll = params.get('roll');
-updateDetailPage(chosenRoll)
+// get roll information: https://www.geeksforgeeks.org/how-to-access-and-process-nested-objects-arrays-or-json/
+const basePrice = rolls[chosenRoll]["basePrice"]; 
+updateDetailPage(chosenRoll);
 
 function updateDetailPage(roll) {
     // update header roll type
@@ -12,14 +15,19 @@ function updateDetailPage(roll) {
 
     // update image
     const rollImage = document.querySelector("#detailPageImage"); 
+    const newImage = rolls[chosenRoll]["imageFile"]; 
     // change roll name to lowercase: https://www.w3schools.com/jsref/jsref_tolowercase.asp
-    rollImage.src = "../assets/products/" + roll.toLowerCase() + "-cinnamon-roll.jpg"; 
+    rollImage.src = "../assets/products/" + newImage; 
+
+    // update base price
+    const priceDisplay = document.querySelector("#finalPrice"); 
+    priceDisplay.textContent= "$" + basePrice.toFixed(2); 
 }
 
 // -------- define the basic case ------------------------------------
-const basePrice = 2.49;
 let currGlazingPrice = 0;
 let currPackSize = 1;
+let cart = []; 
 
 // -------- glazing price -------------------------------------------
 const glazingPrice = {
@@ -81,4 +89,6 @@ function priceUpdate() {
     priceDisplay.textContent= "$" + priceTotal.toFixed(2); 
 }
 
-
+function updateCart(){
+    
+}
