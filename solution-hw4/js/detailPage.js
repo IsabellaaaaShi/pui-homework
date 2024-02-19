@@ -27,6 +27,8 @@ function updateDetailPage(roll) {
 // -------- define the basic case ------------------------------------
 let currGlazingPrice = 0;
 let currPackSize = 1;
+let glazingOption = "Keep original"; 
+let packOption = 1; 
 let cart = []; 
 
 // -------- glazing price -------------------------------------------
@@ -49,6 +51,8 @@ for (const [glazing, price] of Object.entries(glazingPrice)) {
 }
 
 function glazingChange(element) {
+    // get selected text: https://stackoverflow.com/questions/14976495/get-selected-option-text-with-javascript
+    glazingOption = element.options[element.selectedIndex].text; 
     // change the value to a float: https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascript/
     currGlazingPrice = parseFloat(element.value);
     //console.log(typeof currGlazingPrice)
@@ -76,6 +80,7 @@ for (const [pack, price] of Object.entries(packSize)) {
 }
 
 function packSizeChange(element) {
+    packOption = element.options[element.selectedIndex].text; 
     currPackSize = parseFloat(element.value);
     priceUpdate(); 
 }
@@ -89,6 +94,25 @@ function priceUpdate() {
     priceDisplay.textContent= "$" + priceTotal.toFixed(2); 
 }
 
+// -------- update cart ------------------------------------------
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+    }
+}
+
 function updateCart(){
-    
+    // create new roll when click
+    const newRollType = chosenRoll; 
+    const newRollGlazing = glazingOption; 
+    const newRollSize = packOption; 
+    const newbasePrice = basePrice; 
+    // item in class: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+    const newRoll = new Roll(newRollType, newRollGlazing, newRollSize, newbasePrice); 
+    // add item to array: https://w3schools.com/jsref/jsref_push.asp
+    cart.push(newRoll); 
+    console.log(cart); 
 }
