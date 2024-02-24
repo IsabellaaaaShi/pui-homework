@@ -49,45 +49,34 @@
     
       
       <!-- cart detail -->
-      <div class = "cartItemContainer">
-        <img class = "cartImg" src = "../assets/products/original-cinnamon-roll.jpg"/>
-        <div class = "checkoutListing">
-          <p>Original Cinnamon Roll</p>
-          <p>Glazing: Keep original</p>
-          <p>Pack Size: 1</p>
-          <br><br>
-        </div>
-        <div>
-          <p class = "cartItemPrice">$ 2.49</p>
-          <br><br>
-        </div>
+      <div id = "rollList">
+      <!-- template: https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots--> 
+        <template id = "cartTemplate">
+          <div id = "cartFormat">
+            <div class = "cartItemContainer"> 
+              <img class = "cartImg" src = "../assets/products/original-cinnamon-roll.jpg"/>
+              <div class = "checkoutListing">
+                <p id = "rollName">Original Cinnamon Roll</p>
+                <p id = "rollGlaze">Glazing: Keep original</p>
+                <p id = "rollPack">Pack Size: 1</p>
+                <br><br>
+              </div>
+              <div>
+                <p class = "cartItemPrice">$ 2.49</p>
+                <br><br>
+              </div>
+            </div>
+            <p class = "removeStyle">Remove</p>
+          </div>
+        </template>
       </div>
-
-      <p class = "removeStyle">Remove</p>
-
-      <div class = "cartItemContainer">
-        <img class = "cartImg" src = "../assets/products/double-chocolate-cinnamon-roll.jpg"/>
-        <div class = "checkoutListing"> 
-          <p>Double Chocolate Cinnamon Roll</p>
-          <p>Glazing: Sugar Milk</p>
-          <p>Pack Size: 6</p>
-          <br><br>
-        </div>
-        <div>
-          <p class = "cartItemPrice">$ 27.45</p>
-          <br><br>
-        </div>
-      </div>
-
-      <p class = "removeStyle"
-        onclick="removeFromCart(this)">Remove</p>
 
       <hr class = "footerLine">
 
       <div class = "cartItemContainer">
         <p class = "placeHolder"></p>
         <p class = "checkoutListing">Total</p>
-        <p class = "cartItemPrice">$ 29.94</p>
+        <p class = "cartItemPrice" id = "checkoutPrice">$ 29.94</p>
       </div>
       
       <p class = "checkoutButton normalTextBold">Checkout</p>

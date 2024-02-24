@@ -24,7 +24,7 @@ class Roll {
         this.basePrice = basePrice;
         let totalPrice = (this.basePrice + glazingPrice[this.glazing]) * packSize[this.size];
         // round the float: https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary
-        this.totalPrice = parseFloat(totalPrice.toFixed(2));
+        this.totalPrice = totalPrice.toFixed(2);
     }
 }
 
@@ -40,15 +40,67 @@ addToCart("Walnut", "Vanilla milk", 12, rolls["Walnut"]["basePrice"]);
 addToCart("Raisin", "Sugar milk", 3, rolls["Raisin"]["basePrice"]); 
 addToCart("Apple", "Keep original", 3, rolls["Apple"]["basePrice"]); 
 
-console.log(cartItem)
 
-// --------- display cart items on the page
-function aaa(){
+// --------- display cart items on the page --------------------------
+function displayRollOnPage(roll){
+    // template: lab 5
+    // create clone
+    const template  = document.querySelector("#cartTemplate"); 
+    const clone = template.content.cloneNode(true); 
+    roll.element = clone.querySelector("#cartFormat"); 
+
+    // remove item
+    const removeItem = roll.element.querySelector(".removeStyle"); 
+    removeItem.addEventListener("click", () => {
+        removeFromCart(roll); 
+    }); 
+
+    updateRoll(roll); 
+    updateTotalPrice(roll); 
+    
+    // add to DOM
+    const rollListElement = document.querySelector("#rollList"); 
+    rollListElement.append(roll.element); 
+}
+
+function updateRoll(roll){
+    const rollImage = roll.element.querySelector(".cartImg"); 
+    const rollTitle = roll.element.querySelector("#rollName"); 
+    const rollCurrGlaze = roll.element.querySelector("#rollGlaze"); 
+    const rollPacking = roll.element.querySelector("#rollPack"); 
+    const rollTotalPrice = roll.element.querySelector(".cartItemPrice"); 
+
+    rollImage.src = "../assets/products/" + rolls[roll.type]["imageFile"];
+    rollTitle.innerText = roll.type + " Cinnamon Roll"; 
+    rollCurrGlaze.innerText = "Glazing: " + roll.glazing; 
+    rollPacking.innerText = "Pack Size: " + roll.size; 
+    rollTotalPrice.innerText = "$ " + roll.totalPrice; 
 
 }
+
 // --------- remove from cart ----------------------------------------
 
-function removeFromCart(this){
-
+function removeFromCart(roll){
+    roll.element.remove(); 
+    // remove from array: https://sentry.io/answers/remove-specific-item-from-array/
+    const index = cartItem.indexOf(roll); 
+    cartItem.splice(index, 1); 
+    console.log(cartItem); 
+    updateTotalPrice(roll); 
 }
+
 // -------- calculate price ------------------------------------------
+function updateTotalPrice(){
+    const cartTotalPrice = document.querySelector("#checkoutPrice"); 
+    let priceCount = 0; 
+    for (const roll of cartItem){
+        individualPrice = parseFloat(roll.totalPrice); 
+        priceCount += individualPrice; 
+    }
+
+    cartTotalPrice.innerText = "$ " + priceCount.toFixed(2); 
+}
+
+for (const rollItem of cartItem){
+    displayRollOnPage(rollItem); 
+}

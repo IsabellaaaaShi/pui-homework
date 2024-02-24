@@ -222,6 +222,14 @@ main section a {
     align-items: flex-start;
 }
 
+#rollList {
+    width: 100%; 
+}
+
+#cartTemplate {
+    width: 100%; 
+}
+
 .cartItemContainer {
     display: flex; 
     width: 100%; 
@@ -229,6 +237,7 @@ main section a {
     justify-content: space-between;
     align-items: center;
 }
+
 
 .removeStyle {
     font-size: 20px; 
