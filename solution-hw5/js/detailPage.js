@@ -1,4 +1,3 @@
-
 // -------- update detail page selection ------------------------------------------
 // reference lab 4
 const queryString = window.location.search; 

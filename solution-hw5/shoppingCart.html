@@ -7,6 +7,9 @@
 
     <!-- Link to css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Link to javascript-->
+    <script defer src="js/rollsData.js"></script>
+    <script defer src="js/cartPage.js"></script>
   </head>
   
   
@@ -44,6 +47,7 @@
     <!-- main webpage -->
     <main class = "cartContainer">
     
+      
       <!-- cart detail -->
       <div class = "cartItemContainer">
         <img class = "cartImg" src = "../assets/products/original-cinnamon-roll.jpg"/>
@@ -75,7 +79,8 @@
         </div>
       </div>
 
-      <p class = "removeStyle">Remove</p>
+      <p class = "removeStyle"
+        onclick="removeFromCart(this)">Remove</p>
 
       <hr class = "footerLine">
 
