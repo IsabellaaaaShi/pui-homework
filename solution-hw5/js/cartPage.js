@@ -41,7 +41,7 @@ addToCart("Raisin", "Sugar milk", 3, rolls["Raisin"]["basePrice"]);
 addToCart("Apple", "Keep original", 3, rolls["Apple"]["basePrice"]); 
 
 
-// --------- display cart items on the page --------------------------
+// --------- display cart items on the page ---------`-----------------
 function displayRollOnPage(roll){
     // template: lab 5
     // create clone
