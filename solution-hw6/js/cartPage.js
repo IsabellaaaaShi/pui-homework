@@ -40,6 +40,10 @@ function retrieveFromLocalStorage() {
     }
   }
 
+// setup badge; length of array: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
+const badge = document.querySelector(".oval"); 
+badge.innerText = cart.length
+
 // --------- display cart items on the page --------------------------
 function displayRollOnPage(roll){
     // template: lab 5
@@ -85,6 +89,9 @@ function removeFromCart(roll){
     const index = cart.indexOf(roll); 
     cart.splice(index, 1); 
     updateTotalPrice(roll); 
+
+    // update the badge
+    badge.innerText = cart.length
 
     saveToLocalStorage(); 
 }

@@ -70,6 +70,11 @@ function retrieveFromLocalStorage() {
     }
   }
 
+// setup badge; length of array: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
+const badge = document.querySelector(".oval"); 
+badge.innerText = cart.length
+
+
 // -------- glazing price -------------------------------------------
 const glazingSelect = document.querySelector("select#glazingOption");
 // create dropdown menu for glazing
@@ -129,6 +134,9 @@ function updateCart(){
     const newRoll = new Roll(newRollType, newRollGlazing, newRollSize, newbasePrice); 
     // add item to array: https://w3schools.com/jsref/jsref_push.asp
     cart.push(newRoll); 
+
+    // update the badge
+    badge.innerText = cart.length
 
     saveToLocalStorage();
 }
