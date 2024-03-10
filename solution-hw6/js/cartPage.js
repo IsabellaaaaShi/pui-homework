@@ -13,9 +13,6 @@ const packSize = {
     "12": 10
 }
 
-// -------- define the basic case ------------------------------------
-let cartItem = []; 
-
 class Roll {
     constructor(rollType, rollGlazing, packAmount, basePrice) {
         this.type = rollType;
@@ -28,18 +25,20 @@ class Roll {
     }
 }
 
-// -------- add new rolls to cart ------------------------------------
-function addToCart(rollType, rollGlazing, packSize, basePrice){
-    const newRoll = new Roll(rollType, rollGlazing, packSize, basePrice); 
-    // add item to array: https://w3schools.com/jsref/jsref_push.asp
-    cartItem.push(newRoll); 
-}
+// -------- define the cart and retrieve existing ------------------------------------
+let cart = []; 
+if (localStorage.getItem('storedCart') != null) {
+    retrieveFromLocalStorage();
+  }
 
-addToCart("Original", "Sugar milk", 1, rolls["Original"]["basePrice"]); 
-addToCart("Walnut", "Vanilla milk", 12, rolls["Walnut"]["basePrice"]); 
-addToCart("Raisin", "Sugar milk", 3, rolls["Raisin"]["basePrice"]); 
-addToCart("Apple", "Keep original", 3, rolls["Apple"]["basePrice"]); 
-
+function retrieveFromLocalStorage() {
+    const cartArrayString = localStorage.getItem('storedCart');
+    const cartArray = JSON.parse(cartArrayString);
+    for (const cartInfo of cartArray) {
+      const cartItem = new Roll(cartInfo.type, cartInfo.glazing, cartInfo.size, cartInfo.basePrice); 
+      cart.push(cartItem); 
+    }
+  }
 
 // --------- display cart items on the page --------------------------
 function displayRollOnPage(roll){
@@ -83,17 +82,26 @@ function updateRoll(roll){
 function removeFromCart(roll){
     roll.element.remove(); 
     // remove from array: https://sentry.io/answers/remove-specific-item-from-array/
-    const index = cartItem.indexOf(roll); 
-    cartItem.splice(index, 1); 
-    console.log(cartItem); 
+    const index = cart.indexOf(roll); 
+    cart.splice(index, 1); 
     updateTotalPrice(roll); 
+
+    saveToLocalStorage(); 
 }
+
+function saveToLocalStorage() {  
+    const cartArrayString = JSON.stringify(cart);
+  
+    localStorage.setItem('storedCart', cartArrayString);
+    console.log(localStorage.getItem('storedCart')); 
+  }
+
 
 // -------- calculate price ------------------------------------------
 function updateTotalPrice(){
     const cartTotalPrice = document.querySelector("#checkoutPrice"); 
     let priceCount = 0; 
-    for (const roll of cartItem){
+    for (const roll of cart){
         individualPrice = parseFloat(roll.totalPrice); 
         priceCount += individualPrice; 
     }
@@ -101,6 +109,6 @@ function updateTotalPrice(){
     cartTotalPrice.innerText = "$ " + priceCount.toFixed(2); 
 }
 
-for (const rollItem of cartItem){
+for (const rollItem of cart){
     displayRollOnPage(rollItem); 
 }

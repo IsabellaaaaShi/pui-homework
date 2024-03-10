@@ -24,13 +24,6 @@ function updateDetailPage(roll) {
 }
 
 // -------- define the basic case ------------------------------------
-let currGlazingPrice = 0;
-let currPackSize = 1;
-let glazingOption = "Keep original"; 
-let packOption = 1; 
-let cart = []; 
-
-// -------- glazing price -------------------------------------------
 const glazingPrice = {
     "Keep original": 0,
     "Sugar milk": 0,
@@ -38,6 +31,46 @@ const glazingPrice = {
     "Double chocolate": 1.5
 }
 
+const packSize = {
+    "1": 1,
+    "3": 3,
+    "6": 5,
+    "12": 10
+}
+
+class Roll {
+    constructor(rollType, rollGlazing, packAmount, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packAmount;
+        this.basePrice = basePrice;
+        let totalPrice = (this.basePrice + glazingPrice[this.glazing]) * packSize[this.size];
+        // round the float: https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary
+        this.totalPrice = totalPrice.toFixed(2); 
+    }
+}
+
+let currGlazingPrice = 0;
+let currPackSize = 1;
+let glazingOption = "Keep original"; 
+let packOption = 1; 
+let cart = []; 
+
+// check local storage for cart information
+if (localStorage.getItem('storedCart') != null) {
+    retrieveFromLocalStorage();
+  }
+
+function retrieveFromLocalStorage() {
+    const cartArrayString = localStorage.getItem('storedCart');
+    const cartArray = JSON.parse(cartArrayString);
+    for (const cartInfo of cartArray) {
+      const cartItem = new Roll(cartInfo.type, cartInfo.glazing, cartInfo.size, cartInfo.basePrice); 
+      cart.push(cartItem); 
+    }
+  }
+
+// -------- glazing price -------------------------------------------
 const glazingSelect = document.querySelector("select#glazingOption");
 // create dropdown menu for glazing
 // javascript dropdown menu: https://github.com/cmu-spuds/pui-materials/tree/main/in-lab-examples/puinote-lab04/select-example
@@ -54,18 +87,10 @@ function glazingChange(element) {
     glazingOption = element.options[element.selectedIndex].text; 
     // change the value to a float: https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascript/
     currGlazingPrice = parseFloat(element.value);
-    //console.log(typeof currGlazingPrice)
     priceUpdate();
 }
 
 // -------- pack size ------------------------------------------------
-const packSize = {
-    "1": 1,
-    "3": 3,
-    "6": 5,
-    "12": 10
-}
-
 const packSelect = document.querySelector("select#packSizeOption");
 
 // create dropdown menu for price
@@ -94,24 +119,23 @@ function priceUpdate() {
 }
 
 // -------- update cart ------------------------------------------
-class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
-        this.type = rollType;
-        this.glazing =  rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
-    }
-}
-
 function updateCart(){
     // create new roll when click
     const newRollType = chosenRoll; 
     const newRollGlazing = glazingOption; 
-    const newRollSize = packOption; 
+    const newRollSize = packOption.toString(); 
     const newbasePrice = basePrice; 
     // item in class: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
     const newRoll = new Roll(newRollType, newRollGlazing, newRollSize, newbasePrice); 
     // add item to array: https://w3schools.com/jsref/jsref_push.asp
     cart.push(newRoll); 
-    console.log(cart); 
+
+    saveToLocalStorage();
 }
+
+function saveToLocalStorage() {  
+    const cartArrayString = JSON.stringify(cart);
+  
+    localStorage.setItem('storedCart', cartArrayString);
+    console.log(localStorage.getItem('storedCart')); 
+  }
